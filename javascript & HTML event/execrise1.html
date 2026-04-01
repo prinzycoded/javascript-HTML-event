@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>execrise 1</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex flex-col justify-center allign-center mt-100">
+        <button id="myBtn" class="py-20 bg-blue-400 text-white rounded-2xl">click me !</button>
+        <p id="paragraph" class="text-4xl">hello</p>
+</div>
+    
+</body>
+<script>
+    const button= document.getElementById("myBtn")
+    const paragraph= document.getElementById("paragraph")
+    let count= 0
+
+    button.addEventListener("click", function (){
+
+        const clickCount = count++
+        paragraph.textContent= `you have clicked ${clickCount + 1}times !`
+    })
+</script>
+</html>
