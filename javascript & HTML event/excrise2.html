@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea</title>
+</head>
+<body>
+     <textarea id="textInput" placeholder="Type something..."></textarea>
+  <p id="charCount">You have typed 5 characters</p>
+
+  <script>
+    const textarea = document.getElementById("textInput");
+    const paragraph = document.getElementById("charCount");
+
+    textarea.addEventListener("input", function(event) {
+      let length = event.target.value.length;
+      paragraph.textContent = "You have typed " + length + " characters";
+    });
+  </script>
+    
+</body>
+</html>
